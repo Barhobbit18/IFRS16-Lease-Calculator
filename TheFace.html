@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>IFRS 16 WP</title>		
+		<script language="JavaScript" type="text/javascript" 
+			src="TheCalc.js"></script>		
+	</head>
+	<body>
+		<h1>IFRS 16 WP</h1>
+		<style>
+
+		body{width:100%;font-family:calibri; background-color: #grey;}
+        .demoInputBox {padding: 10px;border: #bdbdbd 1px solid;border-radius: 4px;background-color: #grey;width: 10%;}
+        .demoInputBox2 {padding: 10px;border: #bdbdbd 1px solid;border-radius: 4px;background-color: #grey;width: 20%;}
+
+        label {
+        display: inline-block;
+        width: 140px;
+         text-align: right;
+             }
+
+        </style>
+		
+		<hr>		
+		<form>
+
+
+			<fieldset>
+			<div class="block">
+				<legend ></legend>
+				<br/>
+				<label for="capital"  ><b>Rental:</b></label>
+				<input type="text" id="capital" class="demoInputBox" />
+			</div>
+				<br />
+			<div class="block">	
+				<label for="interest"><b>Discount:</b></label>
+				<input type="text" id="interest" class="demoInputBox" />
+			</div>	
+				<br />
+			<div class="block">	
+			
+			<div class="block">	
+				<label for="escalate"><b>Escalation rate:</b></label>
+				<input type="text" id="escalate" class="demoInputBox" />
+			</div>	
+			
+				<br />
+				<label for="terms"><b>Lease Period:</b></label>
+				
+				<select id="terms" class="demoInputBox" >
+					<option value="12">12 Months</option>
+					<option value="24">24 Months</option>
+					<option value="36">36 Months</option>
+					<option value="48">48 Months</option>
+					<option value="60">60 Months</option>
+            
+				</select>
+				<label for="Extention"><b>Extention Option:</b></label>
+				
+				<select id="Extention" class="demoInputBox" >
+				    <option value="0">No extention</option>
+					<option value="12">12 Months</option>
+					<option value="24">24 Months</option>
+					<option value="36">36 Months</option>
+					<option value="48">48 Months</option>
+					<option value="60">60 Months</option>
+            
+				</select>
+			<div >	
+				<br />
+				<input type="button" class="demoInputBox2"   value="Calculate" onclick="getValues()" />								
+			</fieldset>
+		</form>
+		<form>
+			<fieldset>
+			<legend>Outputs</legend>
+				<div id="Result" ></div>
+			</fieldset>						
+		</form>		
+	</body>
+</html>
+
+
+
+
+<script language="javascript" >
+
+var wwOpenInstalled;
+if (wwOpenInstalled || parent.wwOpenInstalled) {
+	if (window.Event) {
+		document.captureEvents (Event.MOUSEUP);
+	}
+	document.onmouseup = (parent.wwOpenInstalled) ? parent.wwOnMouseUp : wwOnMouseUp;
+}
+
+//--></script>
+
+		<script language="JavaScript" type="text/javascript" 
+			src="export.js"></script>
+<button onclick="exportTableToExcel('tblData', 'IFRS16-Lease') ">Export Table Data To Excel File</button>
+
+
